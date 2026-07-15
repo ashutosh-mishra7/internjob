@@ -34,13 +34,16 @@ const Footer = () => {
           {/* Brand & Socials */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <div style={{
-                width: '28px', height: '28px', borderRadius: '8px',
-                backgroundColor: '#F6FAFD',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-              }}>
-                <span style={{ color: '#0A1931', fontWeight: 800, fontSize: '14px', letterSpacing: '-0.03em' }}>ij</span>
-              </div>
+              <img 
+                src="/logo.svg" 
+                alt="InternJob Logo" 
+                style={{
+                  width: '28px',
+                  height: '28px',
+                  borderRadius: '8px',
+                  backgroundColor: '#F6FAFD',
+                }} 
+              />
               <span style={{ fontWeight: 700, fontSize: '16px', letterSpacing: '-0.03em', color: '#F6FAFD' }}>
                 InternJob<span style={{ color: '#B3CFE5' }}>.in</span>
               </span>

@@ -16,6 +16,6 @@
   <path d="M50 25L82 38L50 51L18 38Z" fill="url(#iconGrad)" />
   <path d="M32 45.5V58C32 63.5 40 68 50 68C60 68 68 63.5 68 58V45.5" stroke="url(#iconGrad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
   
-  <!-- Briefcase handle outline -->
+  <!-- Briefcase handle outline at the top (underneath the cap to tie them together) -->
   <path d="M42 75H58" stroke="url(#iconGrad)" stroke-width="6" stroke-linecap="round" />
 </svg>

@@ -90,18 +90,15 @@ const Navbar = () => {
               padding: 0,
             }}
           >
-            <div style={{
-              width: '28px',
-              height: '28px',
-              borderRadius: '8px',
-              backgroundColor: 'var(--text-primary)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              flexShrink: 0,
-            }}>
-              <span style={{ color: 'var(--bg)', fontWeight: 800, fontSize: '14px', letterSpacing: '-0.03em' }}>ij</span>
-            </div>
+            <img 
+              src="/logo.svg" 
+              alt="InternJob Logo" 
+              style={{
+                width: '28px',
+                height: '28px',
+                flexShrink: 0,
+              }} 
+            />
             <span style={{
               fontWeight: 700,
               fontSize: '15px',
