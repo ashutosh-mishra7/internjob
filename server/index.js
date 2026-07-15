@@ -29,10 +29,20 @@ if (process.env.FRONTEND_URL) {
 }
 app.use(cors({
   origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin) || origin.startsWith('http://localhost:')) {
+    if (!origin) {
+      return callback(null, true);
+    }
+    
+    // Check if origin is allowed
+    const isAllowed = allowedOrigins.includes(origin) || 
+                      origin.startsWith('http://localhost:') || 
+                      origin.endsWith('.vercel.app') || 
+                      origin.includes('onrender.com');
+                      
+    if (isAllowed) {
       callback(null, true);
     } else {
-      callback(new Error('Not allowed by CORS'));
+      callback(null, false); // Reject gracefully without throwing a 500 error
     }
   },
   credentials: true
