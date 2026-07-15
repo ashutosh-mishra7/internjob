@@ -34,7 +34,7 @@ const Dashboard = () => {
               fontWeight: 700, fontSize: '18px', color: 'var(--text-secondary)',
             }}>
               {user.role === 'user' && user.avatar ? (
-                <div dangerouslySetInnerHTML={{ __html: getAvatarSvg(user.avatar) }} />
+                <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }} dangerouslySetInnerHTML={{ __html: getAvatarSvg(user.avatar) }} />
               ) : (
                 user.companyName?.[0] || 'O'
               )}

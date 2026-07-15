@@ -82,7 +82,7 @@ const Profile = () => {
               flexShrink: 0,
             }}>
               {!isOrg && avatar ? (
-                <div dangerouslySetInnerHTML={{ __html: getAvatarSvg(avatar) }} />
+                <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }} dangerouslySetInnerHTML={{ __html: getAvatarSvg(avatar) }} />
               ) : (
                 companyName?.[0] || 'O'
               )}
@@ -162,7 +162,7 @@ const Profile = () => {
                         backgroundColor: 'var(--surface)',
                       }}
                     >
-                      <div dangerouslySetInnerHTML={{ __html: getAvatarSvg(av) }} />
+                      <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }} dangerouslySetInnerHTML={{ __html: getAvatarSvg(av) }} />
                     </button>
                   ))}
                 </div>

@@ -156,7 +156,7 @@ const Navbar = () => {
                     color: 'var(--text-secondary)',
                   }}>
                     {user.role === 'user' && user.avatar ? (
-                      <div dangerouslySetInnerHTML={{ __html: getAvatarSvg(user.avatar) }} />
+                      <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }} dangerouslySetInnerHTML={{ __html: getAvatarSvg(user.avatar) }} />
                     ) : (
                       <span>{user.name?.[0] || user.companyName?.[0] || 'U'}</span>
                     )}
