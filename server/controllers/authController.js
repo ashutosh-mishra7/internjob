@@ -127,9 +127,12 @@ const adminLogin = async (req, res) => {
 // @route   POST /api/auth/logout
 // @access  Public
 const logout = (req, res) => {
+  const isProd = process.env.NODE_ENV === 'production' || (process.env.FRONTEND_URL && !process.env.FRONTEND_URL.includes('localhost'));
   res.cookie('jwt', '', {
     httpOnly: true,
     expires: new Date(0),
+    secure: isProd,
+    sameSite: isProd ? 'none' : 'lax',
   });
   res.status(200).json({ message: 'Logged out successfully' });
 };
